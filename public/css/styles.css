@@ -280,5 +280,9 @@ gap: 5px
         display: flex;
         flex-flow: column wrap;
     }
+	
+	#survey-btn {
+   margin-left: 10px;
+}
 
 }
