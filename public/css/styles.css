@@ -128,8 +128,9 @@ gap: 5px
 }
 
 .bp-check input {
-    max-width: 6rem;
+    max-width: 8rem;
     text-align: center;
+	padding: 1px;
 }
 
 #assess {
