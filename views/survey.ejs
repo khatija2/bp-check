@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+</head>
+<body>
+<div class="scr-cont">
+    <div class="list-container">
+    <h4>Blood Pressure Survey</h4>
+		<% if (errorMessage && errorMessage.length > 0) { %>
+		<div class="alert-danger">
+		<%= errorMessage %>
+  		<span class="alertbtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		</div>
+		<% } %>
+<form name="submitForm" id="submitForm"  action="/survey" method="POST">
+    <div>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" aria-label="name" title="name" required>
+    </div>
+    <div class="question"> 
+        <p>My Blood Pressure is:</p>
+    <div class="bp-form">
+        <div class="bp-check">
+        <input type="number" id="systolic" name="systolic" aria-label="systolic" title="systolic" min="50" max="250" value="">
+        <input type="number" id="diastolic" name="diastolic" aria-label="diastolic" title="diastolic" min="20" max="200" value="" >
+        </div>
+    <button type="button" id="assess" data-bs-toggle="modal" data-bs-target="#optimal">Assess</button>
+    </div>
+    </div>
+    <div class="question"> 
+    <p>Did you find this website useful?</p>
+    <div class="check-cont"> 
+    <input type="checkbox" id="useful" name="useful" value="yes">
+    <label for="useful">yes</label><br>
+    <input type="checkbox" id="useless" name="useless" value="no">
+    <label for="useless">no</label><br>
+    </div>
+	<div class="area">
+    <label for="info">If yes, what information did you find particularly useful?</label>
+     <textarea name="info" cols="40" rows="3"></textarea>
+	</div>
+    </div>
+    <div class="question"> 
+        <p>Were you satisfied with the blood pressure measurement service provided by Khatija, the intern pharmacist?</p>
+        <div class="check-cont"> 
+        <input type="checkbox" id="satisfied" name="satisfied" value="yes">
+        <label for="satisfied">yes</label><br>
+        <input type="checkbox" id="dissatisfied" name="dissatisfied" value="no">
+        <label for="dissatisfied">no</label><br>
+        </div>
+		 <div class="area">
+        <label for="service">If not, how could she improve the service?</label>
+         <textarea name="service" cols="40" rows="3"></textarea>
+		</div>
+    </div>
+    <div id="submit-form">
+    <button type="submit" form="submitForm" id="submit">Submit</button>
+    </div>
+    <div class="modal" id="optimal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" id="mod-cont">
+
+          </div>
+        </div>
+      </div>   
+</form>
+<script src="/javascript/script.js"></script>
+</div>
+</div>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>  
+</body>
+</html>

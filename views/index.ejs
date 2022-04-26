@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+</head>
+<body>
+    <div class="scr-cont">
+      <div class="d-flex justify-content-center mb-2">
+        <h1>Know your Blood Pressure?</h1>
+      </div>
+	<% if (successMessage && successMessage.length > 0) { %>
+	<div class="alert-success">
+	<%= successMessage %>
+  	<span class="alertbtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	</div>
+	<% } %>	
+      <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" style="height: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" style="height: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" style="height: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" style="height: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" style="height: 5px;"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" style="height: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" style="height: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" style="height: 5px;" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="100000">
+            <div class="list-container">
+              <h4>What is High Blood Pressure?</h4>
+              <p>The force of your blood pushing against the walls of your blood vessels is your blood pressure (BP).  Your BP reading is the measurement of this force and is given in two numbers.  The top figure (systolic pressure) is the pressure in your vessels when your heart contracts, and the lower figure (diastolic pressure) is the pressure when your heart relaxes.</p>
+              <div>
+                <div class="card bg-success bg-opacity-75 mb-2" style="width: 7rem px-0.1 py-0.1">
+                  <div class="card-body">
+                    <h6 class="card-title"><strong>Optimal BP: less than 120/80</strong></h6>
+                  </div>
+                </div>
+                <div class="card bg-warning bg-opacity-75 mb-2" style="width: 7rem px-0.1 py-0.1 ">
+                  <div class="card-body">
+                    <h6 class="card-title"><strong>High-normal BP: 130-139/85-89</strong></h6>
+                  </div>
+                </div>
+                <div class="card bg-danger bg-opacity-75 mb-2" style="width: 7rem px-0.1 py-0.1">
+                  <div class="card-body">
+                    <h6 class="card-title"><strong>High BP: greater than 140/90</strong></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="100000">
+            <div class="list-container">
+              <div>
+              <h4>Why is it important to check your blood pressure?</h4>
+              <p>Uncontrolled high blood pressure (hypertension) puts you at a greater risk for serious health conditions, including:</p>
+            </div>
+            <div> 
+            <div class="row row-cols-2 row-cols-md-2 g-4">
+              <div class="col">
+                <div class="card" id="risk">
+                  <img src="https://cdn.pixabay.com/photo/2018/03/17/11/41/stroke-3233778_1280.jpg" class="card-img-top" alt="..." id="img-ht">
+                  <div class="card-body">
+                    <p class="card-text" id="risk-text">Stroke</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" id="risk">
+                  <img src="https://cdn.pixabay.com/photo/2018/02/24/05/51/heart-attack-3177360_1280.jpg" class="card-img-top" alt="..." id="img-ht">
+                  <div class="card-body">
+                    <p class="card-text" id="risk-text">Heart Disease</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" id="risk">
+                  <img src="https://img.favpng.com/5/16/10/kidney-failure-kidney-disease-computer-icons-png-favpng-kE2PBP4gCkP3ivwZjmHH6LdKU_t.jpg" class="card-img-top" alt="..." id="img-ht">
+                  <div class="card-body">
+                    <p class="card-text" id="risk-text">Kidney Disease</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card" id="risk">
+                  <img src="https://thumbs.dreamstime.com/b/conjunctivitis-eye-disease-side-view-vector-illustration-91297368.jpg" class="card-img-top" alt="..." id="img-ht">
+                  <div class="card-body">
+                    <p class="card-text" id="risk-text">Eye Disease</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="1000000">
+            <div class="list-container">
+              <h4>What are the symptoms of high blood pressure?</h4>
+              <p>Most people with high BP have no symptoms.  Some may experience headaches or dizziness.</p>
+              <div class="single">
+                <div class="card" style="width: 14rem;">
+                  <img src="https://cdn.pixabay.com/photo/2021/02/22/05/26/employee-6038877_1280.png" class="card-img-top" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="1000000">
+            <div class="list-container">
+              <h4>What causes high blood pressure?</h4>
+              <p>The causes of high blood pressure are unknown for most people.  However, there are common risk factors:</p>
+              <div class="container bg-white">
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1142/1142699.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>Insufficient physical activity</h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image" >
+                    <img src="https://cdn-icons-png.flaticon.com/512/5571/5571914.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>Being overweight <h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/595/595766.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>Smoking</h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/305/305388.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>High salt diet</h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3884/3884952.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>Family history of high blood pressure</h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2734/2734180.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>High cholesterol</h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3209/3209082.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>Diabetes</h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1488/1488190.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>Stress</h6>
+                  </div>
+                </div>
+                <div class="row" id="causes">
+                  <div class="col" id="col-image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/920/920541.png" class="causes-image" alt="...">
+                  </div>
+                  <div class="col text-left py-2">
+                      <h6>High Alcohol consumption</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="100000">
+            <div class="list-container">
+              <h4>How is high blood pressure diagnosed?</h4>
+              <p>You are considered to have high blood pressure if you have a BP reading of <strong>140/90 or higher on three separate occasions</strong>. 
+                If you have no risk factors for hypertension, your blood pressure should be checked at least once every 2 years.  If your blood pressure is high-normal, your blood pressure should be checked more regularly, at least every 6-12 months. 
+                </p>
+              <div>
+                <div class="single">
+                  <div class="card" style="width: 14rem;">
+                    <img src="https://thumbs.dreamstime.com/z/worried-senior-man-high-blood-pressure-18166492.jpg" class="card-img-top" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="100000">
+            <div class="list-container">
+              <h4>How is high blood pressure managed?</h4>
+              <p>Mildly elevated blood pressure can be managed with lifestyle changes such as:</p>
+              <div>
+                <div class="container bg-white">
+                  <div class="row" id="causes">
+                    <div class="col" id="col-image">
+                      <img src="https://cdn-icons-png.flaticon.com/512/755/755332.png" class="causes-image" alt="...">
+                    </div>
+                    <div class="col text-left py-3">
+                        <h6>Exercising regularly </h6>
+                    </div>
+                  </div>
+                  <div class="row" id="causes">
+                    <div class="col" id="col-image" >
+                      <img src="https://cdn-icons-png.flaticon.com/512/1661/1661999.png" class="causes-image" alt="...">
+                    </div>
+                    <div class="col text-left py-3">
+                        <h6>Quitting smoking <h6>
+                    </div>
+                  </div>
+                  <div class="row" id="causes">
+                    <div class="col" id="col-image">
+                      <img src="https://cdn-icons-png.flaticon.com/512/706/706195.png" class="causes-image" alt="...">
+                    </div>
+                    <div class="col text-left py-3">
+                        <h6>A healthy diet with reduced salt</h6>
+                    </div>
+                  </div>
+                  <div class="row" id="causes">
+                    <div class="col" id="col-image">
+                      <img src="https://cdn-icons-png.flaticon.com/512/1365/1365814.png" class="causes-image" alt="...">
+                    </div>
+                    <div class="col text-left py-3">
+                        <h6>Losing weight</h6>
+                    </div>
+                  </div>
+                  <div class="row" id="causes">
+                    <div class="col" id="col-image">
+                      <img src="https://cdn-icons-png.flaticon.com/512/752/752734.png" class="causes-image" alt="...">
+                    </div>
+                    <div class="col text-left py-3">
+                        <h6>Reducing alcohol consumption</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="my-4">
+                  <p>If lifestyle changes are insufficient, your doctor may prescribe medication to lower your blood pressure.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="100000">
+            <div class="list-container">
+              <h4>Assess your blood pressure reading & complete our survey by clicking on the button below!</h4>
+              <div>
+                <div class="single">
+                  <div class="card" style="width: 14rem;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3930/3930490.png" class="card-img-top" alt="...">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container" id="survey-main">
+        <p>Please click on this button to assess your blood pressure reading and complete our survey! <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" style="max-width: 20px"></p> 
+      <a href="/survey"><img class="btn" role="button" id="survey-btn" title="Blood pressure assessment & survey" src="https://cdn-icons-png.flaticon.com/512/811/811932.png"></a> 
+  
+      </div>
+    </div>
+<div class="container" id="survey-main">
+      <h9>When you visit a website, it may retrieve or store information on your browser in the form of cookies. This website only uses cookies essential for the working of this website.</h9>
+  
+      </div>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>  
+</body>
+</html>
