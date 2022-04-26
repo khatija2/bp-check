@@ -98,6 +98,7 @@ h4 {
 .check-cont {
  display: flex;
  flex-flow: row nowrap;
+ justify-content: flex-start;
  gap: 20px;
  margin-top: -10px;
  margin-bottom: 10px;
@@ -116,17 +117,18 @@ input[type="checkbox"] {
     display: flex;
     flex-flow: row;
     align-items: baseline;
-    gap: 25px
+    gap: 30px
 }
 
 .bp-check {
 display: flex;
 flex-flow: column;
+justify-content: flex-start;
 gap: 5px
 }
 
 .bp-check input {
-    max-width: 200%;
+    width: 8rem;
     text-align: center;
 	padding: 1px;
 }
