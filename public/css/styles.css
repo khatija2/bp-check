@@ -198,6 +198,10 @@ gap: 5px
 }
 
 
+.area {
+      max-width: 80%
+    }
+
 @media only screen and (max-width: 370px) {
 
     .scr-cont {
