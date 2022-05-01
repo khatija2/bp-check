@@ -73,9 +73,13 @@ h4 {
 
 .card-title {
 	pointer-events: none;
+}
+
+.card-title a {
 	text-decoration: none;
 	color: inherit
 }
+
 
 
 #survey-main {
