@@ -21,7 +21,7 @@ document.querySelector("#mod-cont").innerHTML = ` <div class="modal-header" styl
               <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Return to survey</button>
             </div> `
 
-} else if (systolicN > 120 && systolicN <= 129 && diastolicN <= 86) {
+} else if (systolicN <= 129 && diastolicN <= 86) {
 	document.querySelector("#mod-cont").innerHTML = ` <div class="modal-header" style="background-color: rgb(120, 243, 19)">
               <h5 class="modal-title">Great!</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
